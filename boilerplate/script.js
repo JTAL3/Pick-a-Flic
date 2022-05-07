@@ -8,7 +8,8 @@ var btn = document.getElementById("apitestbtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function(e) {
+    e.preventDefault();
   modal.style.display = "block";
   var str = "clicked";
   console.log(str);
