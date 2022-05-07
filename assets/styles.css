@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(24, 19, 28);
+}
+
+header {
+    padding: 20px 35px;
+    background-color:rgb(24, 19, 28);
+}
+
+header h1 {
+    font-weight:bold;
+    font-size: 36px;
+    color: rgb(40, 203, 190);
+    margin: 0;
+    display: inline;
+}
+
+header h1 a {
+    color:rgb(40, 203, 190);
+}
+
+header a {
+    color: white;
+}
+
+header nav{
+    float:right;
+    margin: 7px 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    margin: 0 10px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(40, 203, 190);
+}
+
+a:active {
+    text-decoration: none;
+}
+
+
+
+.hero {
+    background: url("../assets/images/delaney-van-HqA7l8IbhmY-unsplash.jpg");
+    background-size:cover;
+    background-position: center;
+    position:relative;
+    height: 400px;
+}
+
+
+footer {
+    padding: 20px 35px;
+    background-color: rgb(24, 19, 28);
+    color:white;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: small;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .backgroundimage {
+        left:50%;
+        margin-left: -512px;
+    }
+    
+}
