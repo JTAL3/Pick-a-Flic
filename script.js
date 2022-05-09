@@ -36,18 +36,27 @@ window.onclick = function(event) {
 
 const url = "http://www.omdbapi.com/?apikey=39fdf732&"
 
-// var searchButton = document.getElementById("apitestbtn");
+ var searchButton = document.getElementById("my-login");
 
-// // searchButton.onclick = function(){
-//     getData()
-// };
+ searchButton.onclick = function(){
+    getData()
+    
+   };
 
 async function getData() {
-    var title = $("#title").val();
-    var year = $("#year").val(); 
-    var queryString = "http://www.omdbapi.com/?apikey=39fdf732&t=" + title + "&y=" + year + "&plot=short&r=json";
+  var raw = JSON.stringify({
+    "data": {
+      "y": 2017
+    }
+  });
+  const response = await fetch(url, {
+    method: 'POST',
+    body: raw
+  });
+  const data = await response.json();
+  console.log(data.data);
 
-}
+};
 
 //api key 39fdf732
 
