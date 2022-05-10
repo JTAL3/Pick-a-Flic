@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick-a-Flic</title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+  </head>
+ <body>
+    <header>
+      <h1>
+          <a href="/">Pick-a-Flic</a>
+      </h1>
+      <nav>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="">Pick-a-Flic</a>
+            </li>
+          </ul>
+      </nav>
+    </header>
+
+    
+    <section class="hero">
+    
+     </div>
+
+      <div class="row center-align mt-40">
+        <div class="col s12 input-field">
+          <button id="my-login" class="waves-effect waves-light btn">
+            Pick-a-Movie<i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="col s12 input-field">
+          <form id="zip-form" class="row pt-3">
+            <div class="col s12">
+              <form class="box" action="index.html" method="POST">
+              <input type="text" name="" paceholder="Enter Username" id="username">
+              <input type="password" name="" paceholder="Enter Password" id="password">
+              <input type="submit" name="" value="login" onclick="validate()">
+              </form>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+<!-- started messing with modal here-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <label for="modalGenre">Genre</label>
+    <input
+      type="text"
+      id="modalGenre"
+      class="GenreInput"
+      placeholder=""
+    />
+
+    <label for="modalActor">Actors/Actresses</label>
+    <input
+      type="text"
+      id="modalActor"
+      class="ActorInput"
+      placeholder=""
+    />
+
+    <label for="modalActor">Runtime</label>
+    <input
+      type="integer"
+      id="modalRuntime"
+      class="RuntimeInput"
+      placeholder=""
+    />
+
+    <button type="button" id="searchbtn" class="search-btn">
+      Search Movies
+    </button>
+  </div>
+</div>
+
+<!-- End messing with modal here-->
+
+    <footer>
+        <div class="">
+        © 2022 Pick-a-Flic
+        </div>
+    </footer>
+
+  </body>
+</html>
