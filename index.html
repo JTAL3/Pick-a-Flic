@@ -61,28 +61,36 @@
     <span class="close">&times;</span>
 
     <label for="modalGenre">Genre</label>
-    <input
-      type="text"
-      id="modalGenre"
-      class="GenreInput"
-      placeholder=""
-    />
+    <select name="moviegenres" id="moviegenres">
+      <option
+      value="drama">Drama</option>
+      <option
+      value="action">Action</option>
+      <option
+      value="comedy">Comedy</option>
+      <option
+      value="romance">Romance</option>
+      <option
+      value="horror">Horror</option>
+    </select>
 
     <label for="modalActor">Actors/Actresses</label>
     <input
       type="text"
       id="modalActor"
       class="ActorInput"
-      placeholder=""
+      placeholder="Last Name"
     />
 
-    <label for="modalActor">Runtime</label>
-    <input
-      type="integer"
-      id="modalRuntime"
-      class="RuntimeInput"
-      placeholder=""
-    />
+    <label for="modalRuntime">Runtime</label>
+    <select name="runtime" id="runtime">
+      <option
+       value="veryshort">≤90 Minutes</option>
+       <option
+       value="short">≤120 Minutes</option>
+       <option
+       value="long">≥120 Minutes</option>
+    </select>
 
     <button type="button" id="searchbtn" class="search-btn">
       Search Movies
