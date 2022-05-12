@@ -62,9 +62,6 @@ a:active {
     text-decoration: none;
 }
 
-section {
-    padding: 60px;
-}
 /* begin hero */
 
 section {
@@ -108,70 +105,102 @@ section {
     padding: 6px 15px;
     font-size: 14px;
     color: black;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-top: 15px;
     border-radius: 20px;
 }
 
 .moviesearch {
-    padding: 150px;
+    padding: 140px;
 }
 
 .moviesearch h2 {
     padding: 20px;
     font-size: 30px;
 }
-/* begin modal *
+
+/*begin modal*/
+
+
 .modal {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left:0;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    display: none;
+    overflow:auto;
+    
 }
+
 
 .modal-content {
+    margin: 0;
+    padding: 0 10px 20px 0;
+    padding-top: 10px;
     width: 30%;
-    height: 30%;
+    height: 40%;
     display:flex;
-    justify-content:space-around;
+    position:fixed;
     align-items: center;
     flex-direction:column;
+    justify-content: center;
     color: white;
-}
-*/
-/*
-.search-btn {
-    padding: 10px 30px;
-    background-color: rgb(40, 203, 190);
-    color: white;
-    border: none;
+    font-size: 20px;
+    background-color: rgb(24, 19, 28, .95);
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
 }
 
-.search-btn:hover {
-    background-color: white;
+.modal label {
+    padding: 10px;
+}
+
+.modal select {
+    padding: 3px;
+    width: 60%;
+    text-align: center;
+    background-color: rgb(170, 176, 175);
+    border-radius: 5px;
+    
+}
+
+
+.modal input {
+    padding: 3px;
+    width: 60%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(170, 176, 175)
+    
+}
+  
+  /* The Close Button */
+  .close {
+    padding: 0 10px;
+    align-self: flex-end;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+ 
+.close:hover {
     color: rgb(40, 203, 190);
-    border: none;
-}
-*/
-
+    }
 
 
 /* button style */
 .search-btn {
-    display: inline-block;
     padding: 10px 15px;
     font-size: 20px;
+    margin-top: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: #fff;
     background-color: rgb(40, 203, 190);
-    border: none;
+    border:none;
+    border-spacing: 10px;
     border-radius: 20px;
     box-shadow: 1px 1px 3px 0 #999;
   }
@@ -184,6 +213,31 @@ section {
     transform: translateY(4px);
   }
 
+ 
+  .search-btn2 {
+    padding: 10px 15px;
+    width: fit-content;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(40, 203, 190);
+    border:none;
+    border-spacing: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 0 #999;
+  }
+  
+  .search-btn2:hover {background-color: gray}
+  
+  .search-btn2:active {
+    background-color: rgb(40, 203, 190);
+    box-shadow: 0 6px gray;
+    transform: translateY(4px);
+  }
 
 /* end hero */
 
@@ -208,36 +262,7 @@ footer {
     
 }
 
-/* modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: gray;
-    margin: 15% auto;
-    padding: 20px;
-    border: 5px solid rgb(40, 203, 190);
-    width: 40%;
-    border-radius: 10px;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: rgb(24, 19, 28);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
- 
+
   
   
  

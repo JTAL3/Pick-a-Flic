@@ -41,23 +41,25 @@
         </p>
           </form>
           
-  </section>
+    </section>
 
-  <section class="moviesearch">
+    <section class="moviesearch">
     <p>
       <button id="pickbtn" class="search-btn">
         Pick-a-Movie
       </button>
     </p>
     <h2>Click here to search for a movie!</h2>
-  </section>
+   </section>
       <!-- started messing with modal here-->
 
       <!-- The Modal -->
-      <div id="myModal" class="modal">
 
+   <section id="myModal" class="modal">
+
+    
       <div class="modal-content">
-      <span class="close">&times;</span>
+        <span class="close">&times;</span>
 
 
     <label for="modalGenre">Genre</label>
@@ -74,7 +76,7 @@
       value="horror">Horror</option>
     </select>
 
-    <label for="modalActor">Actors/Actresses</label>
+    <label for="modalActor">Actor/Actress</label>
     <input
       type="text"
       id="modalActor"
@@ -92,15 +94,15 @@
        value="long">≥120 Minutes</option>
     </select>
 
-    <button type="button" id="searchbtn" class="search-btn">
+    <button id="searchbtn" class="search-btn2">
       Search Movies
     </button>
-  </div>
+  
 
-  <div id="result"></div>
+   <div id="result"></div>
 
-
-</div>
+    </div>
+    </section>
 
     <!-- End messing with modal here-->
 
@@ -110,10 +112,10 @@
         </div>
     </footer>
 
-  </body>
-  <script src="./script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
+   </body>
+   <script src="./script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
     $(document).ready(function(){
 
       var apikey = "39fdf732"
