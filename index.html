@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pick-a-Flic</title>
     <meta name="description" content="" />
+    
 
     <link rel="stylesheet" href="./assets/styles.css" />
 
@@ -30,6 +31,7 @@
     
     <section class="hero">
 
+
       <div class="pick-login">
         <p>
               <form id="zip-form" action="index.html" method="POST">
@@ -43,7 +45,7 @@
 
   <section class="moviesearch">
     <p>
-      <button id="my-login" class="search-btn">
+      <button id="pickbtn" class="search-btn">
         Pick-a-Movie
       </button>
     </p>
@@ -57,34 +59,48 @@
       <div class="modal-content">
       <span class="close">&times;</span>
 
-      <label for="modalGenre">Genre</label>
-      <input
-        type="text"
-        id="modalGenre"
-        class="GenreInput"
-        placeholder=""
-      />
 
-      <label for="modalActor">Actors/Actresses</label>
-      <input
-        type="text"
-        id="modalActor"
-        class="ActorInput"
-       placeholder=""
-      />
+    <label for="modalGenre">Genre</label>
+    <select name="moviegenres" id="moviegenres">
+      <option
+      value="drama">Drama</option>
+      <option
+      value="action">Action</option>
+      <option
+      value="comedy">Comedy</option>
+      <option
+      value="romance">Romance</option>
+      <option
+      value="horror">Horror</option>
+    </select>
 
-      <label for="modalActor">Runtime</label>
-      <input
-        type="integer"
-        id="modalRuntime"
-        class="RuntimeInput"
-        placeholder=""
-     />
+    <label for="modalActor">Actors/Actresses</label>
+    <input
+      type="text"
+      id="modalActor"
+      class="ActorInput"
+      placeholder="Last Name"
+    />
 
-      <button type="button" id="searchbtn" class="search-btn">
-       Search Movies
-     </button>
-    </section>
+    <label for="modalRuntime">Runtime</label>
+    <select name="runtime" id="runtime">
+      <option
+       value="veryshort">≤90 Minutes</option>
+       <option
+       value="short">≤120 Minutes</option>
+       <option
+       value="long">≥120 Minutes</option>
+    </select>
+
+    <button type="button" id="searchbtn" class="search-btn">
+      Search Movies
+    </button>
+  </div>
+
+  <div id="result"></div>
+
+
+</div>
 
     <!-- End messing with modal here-->
 
@@ -95,4 +111,28 @@
     </footer>
 
   </body>
+  <script src="./script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      var apikey = "39fdf732"
+
+      $("#searchbtn").click(function(event){
+        event.preventDefault()
+
+        var movie = $("#modalActor").val()
+
+        var url = "http://www.omdbapi.com/?apikey="+apikey
+
+        $.ajax({
+          method:'GET',
+          url:url+"&t="+movie,
+          success:function(data){
+            console.log(data)
+          }
+        })
+      })
+    })
+  </script>
 </html>
