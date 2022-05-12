@@ -2,14 +2,13 @@
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("apitestbtn");
+var btn = document.getElementById("pickbtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function(e) {
-    e.preventDefault();
+btn.onclick = function() {
   modal.style.display = "block";
   var str = "clicked";
   console.log(str);
@@ -36,11 +35,11 @@ window.onclick = function(event) {
 
 const url = "http://www.omdbapi.com/?apikey=39fdf732&"
 
-// var searchButton = document.getElementById("apitestbtn");
+var searchButton = document.getElementById("searchbtn");
 
-// // searchButton.onclick = function(){
-//     getData()
-// };
+ searchButton.onclick = function(){
+    getData()
+ };
 
 async function getData() {
     var title = $("#title").val();
@@ -48,27 +47,4 @@ async function getData() {
     var queryString = "http://www.omdbapi.com/?apikey=39fdf732&t=" + title + "&y=" + year + "&plot=short&r=json";
 
 }
-
-//api key 39fdf732
-
-// async function getData() {
-//     var locationInput = document.getElementById("modalLocation");
-//  var zipcode = locationInput.value.trim();
-  
-//     var raw = JSON.stringify({
-//           "data": {
-//             "filterRadius": {
-//               "miles": 50,
-//               "postalcode": zipcode
-//             }
-//         }});
-//     const response = await fetch(url, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/vnd.api+json',
-//            'Authorization': 'u2301vV9'
-//         },
-//        body: raw
-//    });
-//    const data = await response.json();
 

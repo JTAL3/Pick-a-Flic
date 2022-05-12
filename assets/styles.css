@@ -93,3 +93,38 @@ footer {
     }
     
 }
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: gray;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid rgb(40, 203, 190);
+    width: 40%;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(24, 19, 28);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+ 
+  
+  
+ 
+  
