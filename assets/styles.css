@@ -62,16 +62,130 @@ a:active {
     text-decoration: none;
 }
 
+section {
+    padding: 60px;
+}
+/* begin hero */
 
-
-.hero {
-    background: url("../assets/images/delaney-van-HqA7l8IbhmY-unsplash.jpg");
-    background-size:cover;
-    background-position: center;
-    position:relative;
-    height: 400px;
+section {
+    justify-content: center;
+    text-align: center;
 }
 
+.hero {
+    background-image: url("../assets/images/movies.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+/* placeholder input text color */
+::-webkit-input-placeholder { /* Chrome */
+    color: gray;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: gray;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: gray;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: gray;
+  }
+
+.pick-login {
+    margin: 0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.form-input {
+    display:block;
+    padding: 6px 15px;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+.moviesearch {
+    padding: 150px;
+}
+
+.moviesearch h2 {
+    padding: 20px;
+    font-size: 30px;
+}
+/* begin modal *
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.modal-content {
+    width: 30%;
+    height: 30%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction:column;
+    color: white;
+}
+*/
+/*
+.search-btn {
+    padding: 10px 30px;
+    background-color: rgb(40, 203, 190);
+    color: white;
+    border: none;
+}
+
+.search-btn:hover {
+    background-color: white;
+    color: rgb(40, 203, 190);
+    border: none;
+}
+*/
+
+
+
+/* button style */
+.search-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(40, 203, 190);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px 0 #999;
+  }
+  
+  .search-btn:hover {background-color: gray}
+  
+  .search-btn:active {
+    background-color: rgb(40, 203, 190);
+    box-shadow: 0 6px gray;
+    transform: translateY(4px);
+  }
+
+
+/* end hero */
 
 footer {
     padding: 20px 35px;
