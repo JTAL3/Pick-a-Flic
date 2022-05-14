@@ -28,23 +28,32 @@ window.onclick = function(event) {
 
 
 
+const API_KEY = 'api_key=eaeb064cc2b9ae77a9081f858014205c';
+const BASE_URl = 'https://api.themoviedb.org/3';
+const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'
++API_KEY;
 
 
 
 
 
-const url = "http://www.omdbapi.com/?apikey=39fdf732&"
 
-var searchButton = document.getElementById("searchbtn");
 
- searchButton.onclick = function(){
-    getData()
- };
 
-async function getData() {
-    var title = $("#title").val();
-    var year = $("#year").val(); 
-    var queryString = "http://www.omdbapi.com/?apikey=39fdf732&t=" + title + "&y=" + year + "&plot=short&r=json";
 
-}
+
+// const url = "http://www.omdbapi.com/?apikey=39fdf732&"
+
+// var searchButton = document.getElementById("searchbtn");
+
+//  searchButton.onclick = function(){
+//     getData()
+//  };
+
+// async function getData() {
+//     var title = $("#title").val();
+//     var year = $("#year").val(); 
+//     var queryString = "http://www.omdbapi.com/?apikey=39fdf732&t=" + title + "&y=" + year + "&plot=short&r=json";
+
+// }
 
