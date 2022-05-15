@@ -289,3 +289,29 @@ footer {
   .movie:hover .overview{
       transform:translateY(0)
   }
+
+  #tags{
+      width:80%;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 10px auto;
+  }
+
+  .tag{
+      color: rgb(40, 203, 190);
+      padding:10px 20px;
+      background-color: rgb(24, 19, 28);
+      border-radius: 50px;
+      margin:5px;
+      cursor: pointer;
+  }
+
+  .tag.highlight{
+      background-color: silver;
+  }
+
+  .no-results{
+      color:rgb(24, 19, 28);
+  }
