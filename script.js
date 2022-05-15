@@ -26,11 +26,6 @@ window.onclick = function(event) {
   }
 }
 
-// var searchButton = document.getElementById("searchbtn");
-
-// searchButton.onclick = function getMovies(){
-// };
-
 
 
 const API_KEY = 'api_key=eaeb064cc2b9ae77a9081f858014205c';
@@ -243,24 +238,3 @@ form.addEventListener('submit', (e) => {
     getMovies(API_URL);
   }
 })
-
-
-
-
-
-
-// const url = "http://www.omdbapi.com/?apikey=39fdf732&"
-
-// var searchButton = document.getElementById("searchbtn");
-
-//  searchButton.onclick = function(){
-//     getData()
-//  };
-
-// async function getData() {
-//     var title = $("#title").val();
-//     var year = $("#year").val(); 
-//     var queryString = "http://www.omdbapi.com/?apikey=39fdf732&t=" + title + "&y=" + year + "&plot=short&r=json";
-
-// }
-

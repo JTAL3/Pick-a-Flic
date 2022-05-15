@@ -109,7 +109,7 @@
     <form id="form">
       <input type="text" placeholder="search" id="search" class="search">
     </form>
-    
+
     <div id="tags">
       <div class="tag">Action</div>
       <div class="tag">Adventure</div>
@@ -168,27 +168,4 @@
   </body>
   <script src="./script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!--  old api fetch
-  <script>
-    $(document).ready(function(){
-
-      var apikey = "39fdf732"
-
-      $("#searchbtn").click(function(event){
-        event.preventDefault()
-
-        var movie = $("#modalActor").val()
-
-        var url = "http://www.omdbapi.com/?apikey="+apikey
-
-        $.ajax({
-          method:'GET',
-          url:url+"&t="+movie,
-          success:function(data){
-            console.log(data)
-          }
-        })
-      })
-    })
-  </script>  -->
 </html>
