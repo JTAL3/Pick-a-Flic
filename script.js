@@ -231,6 +231,7 @@ form.addEventListener('submit', (e) => {
   selectedGenre=[];
   setGenre();
 
+
   if(searchTerm) {
     getMovies(searchURL+ '&query='+searchTerm)
    }
@@ -238,3 +239,25 @@ form.addEventListener('submit', (e) => {
     getMovies(API_URL);
   }
 })
+
+
+//When the user clicks on favorite it is passed to add to favorites function
+favbutton.onclick = function () {
+  var id = getId(this);
+  addtofavorites(id);
+}
+
+card.appendChild(imageBox);
+imageBox.appendChild(image);
+card.appendChild(cardConent);
+card.appendChild(cardAction);
+cardContent.appendChild(cardTitle);
+cardContent.appendChild(cardText);
+cardAction.appendChild(infoButton);
+cardAction.appendChild(favbutton);
+resultsE1.appendChild(card);
+
+infoButton.textConent = "More"
+favbutton.textConent = "Favorites"
+cardTitle.textConent = movies[i].title;
+
