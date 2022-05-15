@@ -48,3 +48,24 @@ async function getData() {
 
 }
 
+
+//When the user clicks on favorite it is passed to add to favorites function
+favbutton.onclick = function () {
+  var id = getId(this);
+  addtofavorites(id);
+}
+
+card.appendChild(imageBox);
+imageBox.appendChild(image);
+card.appendChild(cardConent);
+card.appendChild(cardAction);
+cardContent.appendChild(cardTitle);
+cardContent.appendChild(cardText);
+cardAction.appendChild(infoButton);
+cardAction.appendChild(favbutton);
+resultsE1.appendChild(card);
+
+infoButton.textConent = "More"
+favbutton.textConent = "Favorites"
+cardTitle.textConent = movies[i].title;
+
