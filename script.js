@@ -1,30 +1,4 @@
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("pickbtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  var str = "clicked";
-  console.log(str);
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 
@@ -120,6 +94,7 @@ const form = document.getElementById('form');
 const search = document.getElementById('search');
 const tagsEl = document.getElementById('tags');
 
+
 var selectedGenre = []
 setGenre();
 function setGenre() {
@@ -198,18 +173,39 @@ function getMovies(url) {
     }else{
       main.innerHTML= `<h1 class="no-results">No Results Found</h1>`
     }
-     
-  })
+
+  
+    var favButton = document.createElement('button');
+        favButton.setAttribute('class', 'fav-btn');
+        favButton.setAttribute ('id', API_URL);
+        favButton.onclick = function() {
+        var id = getId(this); {
+            addToFavorites(id);
 }
+
+    main.appendChild(favButton);
+
+    favButton.textContent = "Favorite"
+
+    }
+  
+  });
+}
+
+     
+
+
 
 function showMovies(data) {
   main.innerHTML = '';
 
   data.forEach(movie => {
     const {title, poster_path, overview} = movie;
+    
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
     movieEl.innerHTML = `
+    
     <img src="${IMG_URL+poster_path}" alt="${title}">
     <div class="movie-info">
       <h3>${title}</h3>
@@ -217,12 +213,50 @@ function showMovies(data) {
     <div class="overview">
       <h3>Overview</h3>
       ${overview}
+      <button id="fav-btn">Favorite</button>
     </div>
     `
+    
+    
+    
+
 
     main.appendChild(movieEl);
+
   })
 }
+//sends to localStorage
+function addToFavorites (id) {
+  var favsArray = [];
+  favsArray = JSON.parse(localStorage.getItem("favorites"));
+  if (favsArray == null) {
+      favsArray = [id];
+      localStorage.setItem("favorites", JSON.stringify(favsArray));
+  } else {
+    if (favsArray.includes(id)) {
+      M.toast({html: "This movie is currently in your favorites."})
+    } else {
+      favsArray.push(id);
+      localStorage.setItem("favorites", JSON.stringify(favsArray));
+      M.toast({html: "Added to favorites!"})
+    }
+  }
+}
+const favoriteList = document.querySelector("savedfavs")
+
+//gets info back from local storage
+function getFavs (){
+  for(i=0; i<localStorage.length; i++){
+    var key = localStorage.key(i)
+    var value = localStorage.getItem(i)
+  }
+}
+//create list item for retrival of data from local storage
+function getId(btn) {
+  return btn.id;
+}
+
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -241,23 +275,12 @@ form.addEventListener('submit', (e) => {
 })
 
 
-//When the user clicks on favorite it is passed to add to favorites function
-favbutton.onclick = function () {
-  var id = getId(this);
-  addtofavorites(id);
-}
 
-card.appendChild(imageBox);
-imageBox.appendChild(image);
-card.appendChild(cardConent);
-card.appendChild(cardAction);
-cardContent.appendChild(cardTitle);
-cardContent.appendChild(cardText);
-cardAction.appendChild(infoButton);
-cardAction.appendChild(favbutton);
-resultsE1.appendChild(card);
 
-infoButton.textConent = "More"
-favbutton.textConent = "Favorites"
-cardTitle.textConent = movies[i].title;
+
+
+
+
+
+
 
