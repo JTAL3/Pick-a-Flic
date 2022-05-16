@@ -10,3 +10,4 @@ function logout() {
     })
     .catch(err => console.log(err));
 }
+document.getElementById("logout").addEventListener("click", logout);
