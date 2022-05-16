@@ -6,6 +6,6 @@
 - Searching for specific movies with a title search
 - Adding movies to a favorites list when logged in
 
-![Mockup](.jpg)
+![Mockup](assets/images/pick-a-flic.jpg)
 
-URL:
+URL:https://github.com/JTAL3/Pick-a-Flic
