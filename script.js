@@ -174,12 +174,12 @@ function getMovies(url) {
       main.innerHTML= `<h1 class="no-results">No Results Found</h1>`
     }
 
-  
+  //favbutton
     var favButton = document.createElement('button');
         favButton.setAttribute('class', 'fav-btn');
-        favButton.setAttribute ('id', API_URL);
-        favButton.onclick = function() {
-        var id = getId(this); {
+        favButton.setAttribute ('id', `${data.id}`);
+        favButton.onclick = function getMovies() {
+        var id = getId(this); 
             addToFavorites(id);
 }
 
@@ -189,7 +189,7 @@ function getMovies(url) {
 
     }
   
-  });
+  );
 }
 
      
@@ -226,6 +226,7 @@ function showMovies(data) {
   })
 }
 
+//sends to localStorage
 function addToFavorites (id) {
   var favsArray = [];
   favsArray = JSON.parse(localStorage.getItem("favorites"));
@@ -243,9 +244,21 @@ function addToFavorites (id) {
   }
 }
 
+
+//gets info back from local storage
+function getFavs (){
+  for(i=0; i<localStorage.length; i++){
+    var key = localStorage.key(i)
+    var value = localStorage.getItem(i)
+  }
+}
+
+//create list item for retrival of data from local storage
 function getId(btn) {
   return btn.id;
 }
+
+const favoriteList = document.querySelector("savedfavs")
 
 
 
