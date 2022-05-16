@@ -225,7 +225,7 @@ function showMovies(data) {
 
   })
 }
-
+//sends to localStorage
 function addToFavorites (id) {
   var favsArray = [];
   favsArray = JSON.parse(localStorage.getItem("favorites"));
@@ -242,7 +242,16 @@ function addToFavorites (id) {
     }
   }
 }
+const favoriteList = document.querySelector("savedfavs")
 
+//gets info back from local storage
+function getFavs (){
+  for(i=0; i<localStorage.length; i++){
+    var key = localStorage.key(i)
+    var value = localStorage.getItem(i)
+  }
+}
+//create list item for retrival of data from local storage
 function getId(btn) {
   return btn.id;
 }
