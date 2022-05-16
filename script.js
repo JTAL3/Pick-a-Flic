@@ -225,7 +225,10 @@ function showMovies(data) {
 
   })
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 775154f908b878f190eb4dcaa19f8df93886fc4b
 //sends to localStorage
 function addToFavorites (id) {
   var favsArray = [];
@@ -243,8 +246,12 @@ function addToFavorites (id) {
     }
   }
 }
+const favoriteList = document.querySelector("savedfavs")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 775154f908b878f190eb4dcaa19f8df93886fc4b
 //gets info back from local storage
 function getFavs (){
   for(i=0; i<localStorage.length; i++){
@@ -252,7 +259,10 @@ function getFavs (){
     var value = localStorage.getItem(i)
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 775154f908b878f190eb4dcaa19f8df93886fc4b
 //create list item for retrival of data from local storage
 function getId(btn) {
   return btn.id;
