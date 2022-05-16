@@ -7,11 +7,16 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:rgb(24, 19, 28);
+    padding: 0 0 60px;
 }
 
 header {
     padding: 20px 35px;
     background-color:rgb(24, 19, 28);
+    position: sticky;
+    width: 100%;
+    top:0;
+    z-index:10;
 }
 
 header h1 {
@@ -102,90 +107,14 @@ section {
 
 .form-input {
     display:block;
-    padding: 6px 15px;
+    padding: 6px 15px 6px;
     font-size: 14px;
     color: black;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 10px;
     border-radius: 20px;
 }
 
-.moviesearch {
-    padding: 140px;
-}
-
-.moviesearch h2 {
-    padding: 20px;
-    font-size: 30px;
-}
-
-/*begin modal*/
-
-
-.modal {
-    display: none;
-    overflow:auto;
-    
-}
-
-
-.modal-content {
-    margin: 0;
-    padding: 0 10px 20px 0;
-    padding-top: 10px;
-    width: 30%;
-    height: 40%;
-    display:flex;
-    position:fixed;
-    align-items: center;
-    flex-direction:column;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    background-color: rgb(24, 19, 28, .95);
-    top:50%;
-    left:50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-}
-
-.modal label {
-    padding: 10px;
-}
-
-.modal select {
-    padding: 3px;
-    width: 60%;
-    text-align: center;
-    background-color: rgb(170, 176, 175);
-    border-radius: 5px;
-    
-}
-
-
-.modal input {
-    padding: 3px;
-    width: 60%;
-    text-align: center;
-    border-radius: 5px;
-    background-color: rgb(170, 176, 175)
-    
-}
-  
-  /* The Close Button */
-  .close {
-    padding: 0 10px;
-    align-self: flex-end;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
- 
-.close:hover {
-    color: rgb(40, 203, 190);
-    }
 
 
 /* button style */
@@ -202,43 +131,16 @@ section {
     border:none;
     border-spacing: 10px;
     border-radius: 20px;
-    box-shadow: 1px 1px 3px 0 #999;
   }
   
   .search-btn:hover {background-color: gray}
   
   .search-btn:active {
     background-color: rgb(40, 203, 190);
-    box-shadow: 0 6px gray;
     transform: translateY(4px);
   }
 
  
-  .search-btn2 {
-    padding: 10px 15px;
-    width: fit-content;
-    font-size: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: rgb(40, 203, 190);
-    border:none;
-    border-spacing: 10px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 3px 0 #999;
-  }
-  
-  .search-btn2:hover {background-color: gray}
-  
-  .search-btn2:active {
-    background-color: rgb(40, 203, 190);
-    box-shadow: 0 6px gray;
-    transform: translateY(4px);
-  }
-
 /* end hero */
 
 /* favorites page styling */
@@ -272,11 +174,27 @@ footer {
 }
 
 
-  
-  
- 
-  
+.moviesearch {
+    padding: 20px;
+}
 
+.moviesearch h2 {
+    padding: 15px;
+}
+
+.searchform {
+    padding: 0 0 10px;
+}
+  
+.search {
+    padding: 10px;
+    width: 30%;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: rgb(170, 176, 175, .6);
+    
+}
 
   main {
       display: flex;
@@ -284,11 +202,15 @@ footer {
       justify-content: center;
   }
 
+
+  
+
+
   .movie {
-      width: 500px;
+      width: 400px;
       margin: 1rem;
       border-radius: 3px;
-      background-color: grey;
+      background-color: rgb(24, 19, 28, .90);
       position:relative;
       overflow: hidden;
   }
@@ -298,32 +220,42 @@ footer {
   }
 
   .movie-info {
-      color:white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 10px;
   }
 
-  .movie-info h3{
-      margin-top: 0;
+  .movie h3{
+      color: rgb(40, 203, 190);
+      text-align: center;
   }
+ 
 
   .overview {
       position:absolute;
+      text-align: left;
+      align-items: center;
       left:0;
       right:0;
       bottom:0;
-      background-color: white;
+      color:white;
+      background-color: rgb(24, 19, 28, .90);
       padding: 1rem;
       max-height: 100%;
       transform:translateY(101%);
       transition:transform 0.3s ease-in;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+  }
+
+  .overview h3 {
+      padding:0 0 5px;
   }
 
   .movie:hover .overview{
       transform:translateY(0)
   }
 
+ 
   #tags{
       width:80%;
       display:flex;
@@ -342,10 +274,54 @@ footer {
       cursor: pointer;
   }
 
+  .tag:hover {
+    color: rgb(24, 19, 28);
+    padding: 10px 20px;
+    background-color: rgb(40, 203, 190);
+    border-radius: 50px;
+    margin:5px;
+    cursor: pointer;
+}
+
+
+
   .tag.highlight{
-      background-color: rgb(101, 110, 58);
+      color: black;
+      background-color: rgb(170, 176, 175, .6);
   }
 
   .no-results{
       color:rgb(24, 19, 28);
+      padding: 60px;
+  }
+
+  #fav-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    width: fit-content;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(40, 203, 190);
+    border:none;
+    border-spacing: 10px;
+    border-radius: 20px;
+  }
+
+  #fav-btn:hover {background-color: gray}
+  
+  #fav-btn:active {
+    background-color: rgb(40, 203, 190);
+    transform: translateY(4px);
+  }
+
+  .savedfavs {
+      color:black;
+  }
+
+  #favorites-table {
+      color:black;
   }
